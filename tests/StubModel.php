@@ -1,6 +1,6 @@
 <?php
 
-namespace Krgupta\ActiveTest;
+namespace Irfan\ActiveLaravelTest;
 
 use Illuminate\Database\Eloquent\Model;
 

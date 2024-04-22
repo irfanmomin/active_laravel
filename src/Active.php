@@ -1,6 +1,6 @@
 <?php
 
-namespace Krgupta\Active;
+namespace Irfan\ActiveLaravel;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
