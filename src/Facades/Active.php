@@ -1,6 +1,6 @@
 <?php
 
-namespace Krgupta\Active\Facades;
+namespace Irfan\ActiveLaravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Krgupta\ActiveTest;
+namespace Irfan\ActiveLaravelTest;
 
 use Illuminate\Contracts\Http\Kernel as HttpKernelContract;
 use Illuminate\Http\Request;
-use Krgupta\Active\Active;
+use Irfan\ActiveLaravel\Active;
 use Orchestra\Testbench\TestCase;
 
 class ActiveTest extends TestCase
@@ -16,11 +16,11 @@ class ActiveTest extends TestCase
         app('router')->group(['middleware' => ['dump']], function () {
             app('router')->get(
                 '/foo/bar',
-                ['as' => 'foo.bar', 'uses' => '\Krgupta\ActiveTest\Http\DumpController@indexMethod']
+                ['as' => 'foo.bar', 'uses' => '\Irfan\ActiveLaravelTest\Http\DumpController@indexMethod']
             );
             app('router')->get(
                 '/foo/bar/{id}/view',
-                ['as' => 'foo.bar.view', 'uses' => '\Krgupta\ActiveTest\Http\DumpController@viewMethod']
+                ['as' => 'foo.bar.view', 'uses' => '\Irfan\ActiveLaravelTest\Http\DumpController@viewMethod']
             );
             app('router')->get('/home', [
                 'as'   => 'home',
@@ -32,7 +32,7 @@ class ActiveTest extends TestCase
             app('router')->bind('model', function ($id) {
                 return new StubModel(['uid' => $id]);
             });
-            app('router')->get('/model/{model}', '\Krgupta\ActiveTest\Http\DumpController@viewMethod');
+            app('router')->get('/model/{model}', '\Irfan\ActiveLaravelTest\Http\DumpController@viewMethod');
         });
     }
 
@@ -249,7 +249,7 @@ class ActiveTest extends TestCase
         return [
             'action is a controller method' => [
                 Request::create('/foo/bar'),
-                '\Krgupta\ActiveTest\Http\DumpController@indexMethod',
+                '\Irfan\ActiveLaravelTest\Http\DumpController@indexMethod',
             ],
             'action is a closure' => [
                 Request::create('/home'),
@@ -281,7 +281,7 @@ class ActiveTest extends TestCase
         return [
             'controller is a controller method' => [
                 Request::create('/foo/bar'),
-                '\Krgupta\ActiveTest\Http\DumpController',
+                '\Irfan\ActiveLaravelTest\Http\DumpController',
             ],
             'controller is a closure' => [
                 Request::create('/home'),
@@ -295,14 +295,14 @@ class ActiveTest extends TestCase
         return [
             'match the first inputted actions' => [
                 Request::create('/foo/bar'),
-                '\Krgupta\ActiveTest\Http\DumpController@indexMethod',
+                '\Irfan\ActiveLaravelTest\Http\DumpController@indexMethod',
                 true,
             ],
             'match the second inputted actions' => [
                 Request::create('/foo/bar'),
                 [
-                    '\Krgupta\ActiveTest\Http\DumpController@viewMethod',
-                    '\Krgupta\ActiveTest\Http\DumpController@indexMethod',
+                    '\Irfan\ActiveLaravelTest\Http\DumpController@viewMethod',
+                    '\Irfan\ActiveLaravelTest\Http\DumpController@indexMethod',
                 ],
                 true,
             ],
@@ -526,14 +526,14 @@ class ActiveTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Krgupta\Active\Providers\ActiveServiceProvider::class,
+            \Irfan\ActiveLaravel\Providers\ActiveServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Active' => \Krgupta\Active\Facades\Active::class,
+            'Active' => \Irfan\ActiveLaravel\Facades\Active::class,
         ];
     }
 

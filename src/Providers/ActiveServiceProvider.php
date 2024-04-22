@@ -1,11 +1,11 @@
 <?php
 
-namespace Krgupta\Active\Providers;
+namespace Irfan\ActiveLaravel\Providers;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\ServiceProvider;
-use Krgupta\Active\Active;
+use Irfan\ActiveLaravel\Active;
 
 /**
  * @author Kamlesh Gupta <webworldgk@gmail.com>

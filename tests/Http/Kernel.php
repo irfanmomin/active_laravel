@@ -1,6 +1,6 @@
 <?php
 
-namespace Krgupta\ActiveTest\Http;
+namespace Irfan\ActiveLaravelTest\Http;
 
 class Kernel extends \Orchestra\Testbench\Http\Kernel
 {

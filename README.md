@@ -22,13 +22,13 @@ composer require krgupta/active
 Append this line to your `providers` array in `config/app.php`
 
 ```php
-Krgupta\Active\Providers\ActiveServiceProvider::class,
+Irfan\ActiveLaravel\Providers\ActiveServiceProvider::class,
 ```
 
 Append this line to your `aliases` array in `config/app.php`
 
 ```php
-'Active' => Krgupta\Active\Facades\Active::class,
+'Active' => Irfan\ActiveLaravel\Facades\Active::class,
 ```
 
 # Contribute
