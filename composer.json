@@ -7,21 +7,21 @@
     "routing"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://example.com",
   "authors": [
     {
       "name": "Irfan Momin",
       "email": "irfan.momin990@gmail.com",
-      "homepage": ""
+      "homepage": "https://example.com"
     }
   ],
   "require": {
-    "php": ">=7.4",
-    "laravel/framework": "^8.0"
+    "php": ">=8.0",
+    "laravel/framework": "^9.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.6",
-    "orchestra/testbench": "^6.3"
+    "orchestra/testbench": "^7.25"
   },
   "autoload": {
     "psr-4": {
